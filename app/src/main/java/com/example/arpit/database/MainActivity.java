@@ -19,10 +19,12 @@ public class MainActivity extends AppCompatActivity {
     Button btn_save,btn_fetch;
     String sname,smobile,semail,stechnology;
     SQLiteDatabase sqLiteDatabase;
-
+Shareddata shareddata;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        shareddata=new Shareddata(getApplicationContext());
+        shareddata.firsttime();
         setContentView(R.layout.activity_main);
 
         et_email=findViewById(R.id.et_email);
